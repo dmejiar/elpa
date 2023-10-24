@@ -1,5 +1,11 @@
 #pragma once
 
+#if @HAVE_SKEWSYMMETRIC@
+#ifndef HAVE_SKEWSYMMETRIC
+#define HAVE_SKEWSYMMETRIC
+#endif
+#endif
+
 /* This might seem over-engineered, but helps to re-use this file also on the
  * Fortran side and thus to keep the definitions in this one place here
  */

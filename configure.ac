@@ -3419,6 +3419,9 @@ AC_MSG_RESULT([${enable_skewsymmetric}])
 AM_CONDITIONAL([HAVE_SKEWSYMMETRIC],[test x"$enable_skewsymmetric" = x"yes"])
 if test x"${enable_skewsymmetric}" = x"yes"; then
   AC_DEFINE([HAVE_SKEWSYMMETRIC],[1],[build for skewsyemmtric case])
+  AC_SUBST([HAVE_SKEWSYMMETRIC],[1])
+else
+  AC_SUBST([HAVE_SKEWSYMMETRIC],[0])
 fi
 
 AC_SUBST([MPI_BINARY])

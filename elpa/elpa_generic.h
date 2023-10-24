@@ -112,6 +112,7 @@ inline void elpa_eigenvectors(const elpa_t handle, std::complex<float>  *a, floa
  *  \param  error   on return the error code, which can be queried with elpa_strerr()
  *  \result void
  */
+#ifdef HAVE_SKEWSYMMETRIC
 #ifdef __cplusplus
 inline void elpa_skew_eigenvectors(const elpa_t handle, double *a, double *ev, double *q, int *error) 
 	{
@@ -130,6 +131,7 @@ inline void elpa_skew_eigenvectors(const elpa_t handle, float  *a, float  *ev, f
                 float*: \
                   elpa_skew_eigenvectors_a_h_a_f \
         )(handle, a, ev, q, error)
+#endif
 #endif
 
 
